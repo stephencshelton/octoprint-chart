@@ -3,7 +3,24 @@ entries:
   octoprint:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2020-12-30T20:49:20.7349212-05:00"
+    created: "2020-12-31T13:38:26.9865082-05:00"
+    description: A helm chart to install octoprint
+    digest: 46a123d1709ad4d6db71e331ad26ba364411308ebc54db6a686e6de29c550e8e
+    home: https://github.com/stephencshelton/octoprint-chart
+    keywords:
+    - octoprint
+    maintainers:
+    - email: sshelton@sevatec.com
+      name: Stephen Shelton
+    name: octoprint
+    sources:
+    - https://github.com/stephencshelton/octoprint-chart
+    urls:
+    - https://stephencshelton.github.io/octoprint-chart/octoprint-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2020-12-31T13:38:26.9853453-05:00"
     description: A helm chart to install octoprint
     digest: 18f53a12e2d53fa34aed400737706f031e5e2ad17c026635a12f4417327f1905
     home: https://github.com/stephencshelton/octoprint-chart
@@ -18,4 +35,4 @@ entries:
     urls:
     - https://stephencshelton.github.io/octoprint-chart/octoprint-0.0.1.tgz
     version: 0.0.1
-generated: "2020-12-30T20:49:20.7312741-05:00"
+generated: "2020-12-31T13:38:26.9843732-05:00"
