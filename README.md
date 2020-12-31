@@ -2,7 +2,7 @@ octoprint
 =========
 OctoPrint is the snappy web interface for your 3D printer that allows you to control and monitor all aspects of your printer and print jobs, right from your browser.
 
-Current chart version is `0.1.1`
+Current chart version is `0.0.1`
 
 Source code can be found [here](https://octoprint.org/)
 
