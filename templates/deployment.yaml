@@ -34,15 +34,8 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           #command: ["/bin/sh"]
           #args: ["-c", "sleep 99d"]
-          {{- if .Values.server.env }}
           env:
- {{ toYaml .Values.server.env | indent 12}}
-          {{- end }}
-            # need to override the one that services provides
-            - { name: "OCTOPRINT_PORT", value: "5000" }
-            - { name: "CAMERA_DEV", value: "/dev/video0" }
-            - { name: "MJPG_STREAMER_INPUT", value: "-y -n -r 640x480" }
-            - { name: "ENABLE_MJPG_STREAMER", value: "true" }
+ {{ toYaml .Values.server.env | indent 12 }}
           ports:
             - name: http
               containerPort: 5000
