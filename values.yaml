@@ -51,7 +51,10 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
-
+server:
+  env:
+    - name: "OCTOPRINT_PORT"
+      value: "5000"
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
@@ -79,6 +82,7 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
+  path: "/octoprint"
   enabled: false
   existingClaim:
   storageClassName:
@@ -87,3 +91,4 @@ persistence:
   size: 1Gi
 
 device: "/dev/ttyACM0"
+video: "/dev/video0"

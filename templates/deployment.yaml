@@ -34,7 +34,10 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           #command: ["/bin/sh"]
           #args: ["-c", "sleep 99d"]
+          {{- if .Values.server.env }}
           env:
+ {{ toYaml .Values.server.env | indent 12}}
+          {{- end }}
             # need to override the one that services provides
             - { name: "OCTOPRINT_PORT", value: "5000" }
             - { name: "CAMERA_DEV", value: "/dev/video0" }
@@ -56,11 +59,11 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
             - name: data
-              mountPath: /octoprint
+              mountPath: {{ .Values.persistence.path }}
             - name: ttyacm0
-              mountPath: /dev/ttyACM0
+              mountPath: {{ .Values.device }}
             - name: video0
-              mountPath: /dev/video0
+              mountPath: {{ .Values.video }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
@@ -86,4 +89,4 @@ spec:
             path: {{ .Values.device | quote }}
         - name: video0
           hostPath:
-            path: /dev/video0
+            path: {{ .Values.video }}
