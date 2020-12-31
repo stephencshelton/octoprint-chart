@@ -1,15 +1,23 @@
-apiVersion: v1
-appVersion: "1.0"
-description: OctoPrint is the snappy web interface for your 3D printer that allows
-  you to control and monitor all aspects of your printer and print jobs, right from
-  your browser.
-home: https://octoprint.org/
-icon: https://octoprint.org/assets/img/logo.png
-maintainers:
-- email: sshelton@sevatec.com
-  name: Stephen Shelton
+apiVersion: v2
 name: octoprint
-sources:
-- https://github.com/foosel/OctoPrint
-- https://hub.docker.com/r/octoprint/octoprint
+description: A Helm chart to install octoprint
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: 0.0.1
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+appVersion: 1.5.0
